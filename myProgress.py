@@ -25,8 +25,8 @@ with c2:
         )
     cp2.st_circular_progress()
 
-hr=st.number_input("Heart Rate:")
-cal=st.number_input("Calories:")
+hr=st.number_input("Heart Rate:", step=1)
+cal=st.number_input("Calories:", step=1)
 if hr or cal:
     df = pd.DataFrame([{"HR":hr, "CAL":cal}])
     df.to_json('data.json', orient='records', lines=True)
